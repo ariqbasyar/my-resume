@@ -61,6 +61,35 @@ p{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media only screen and (max-width:800px) {
+  section{
+    grid-template-columns: 1fr;
+  }
+
+  .links, .job-title-container{
+    flex-direction: column;
+  }
+
+  .skills-container{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .interests-container{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .interest-container img {
+    margin-right: 32px;
+    margin-bottom: 16px;
+  }
+  img.avatar {
+    width: 1800px;
+    position: absolute;
+    border-radius: 50%;
+  }
+}
+
 section {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -161,26 +190,20 @@ img.avatar {
   height: 60px;
 }
 
-@media only screen and (max-width:900px) {
-  section{
-    grid-template-columns: 1fr;
-  }
+.wrapper{
+  height: 90px;
+  text-align: center;
+}
 
-  .links, .job-title-container{
-    flex-direction: column;
-  }
-
-  .skills-container{
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .interests-container{
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
-  .interest-container img {
-    margin-right: 32px;
-    margin-bottom: 16px;
-  }
+.download{
+  top: 50%;
+  position: relative;
+  background-color: #323232;
+  padding: 1em 1.5em;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.download:hover{
+  background-color: red;
 }
